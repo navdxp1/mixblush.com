@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo-removebg-preview (1).png" >
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'><link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Mesmerizing Eyes: Stunning Eyeshadow Shades for Every Look
+
+    </title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  font-family: outfit;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+/* General Navbar Styling */
+.navbar {
+  background-color: #212121; /* Dark background */
+}
+
+.navbar-brand {
+
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: #000 !important;
+  font-size: 15px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #b6486c !important;
+  transform: translateY(-5px);
+}
+
+#talkButton {
+  background-color: #b6486c;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#talkButton:hover {
+  background-color: #b6486c;
+  color: #121212;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Hover effect for navigation items */
+.nav-item:hover .nav-link {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+
+/* Button styling */
+.btn-outline-light {
+    border: 2px solid white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: white;
+    color: #b6486c;
+  }
+
+
+
+
+
+
+/* Product Scroller Container */
+.product-scroller {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 15px 10px;
+  background-color: #fff; /* Light pink background */
+  border-radius: 2px;
+  scroll-behavior: smooth;
+}
+.product-scroller::-webkit-scrollbar{
+  display: none;
+}
+/* Flex container to align products */
+.product-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+/* Individual product cards */
+.product-card {
+  display: inline-block;
+  width: 120px; /* Adjust width as needed */
+  flex: 0 0 auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.product-card p{
+  font-size: 13px;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.scroll-btn:hover {
+  background-color: white;
+}
+
+.scroll-left {
+  left: 5px;
+}
+
+.scroll-right {
+  right: 5px;
+}
+
+
+
+
+.product-card-new {
+            border: 1px solid #ddd;
+            background: #fff;
+     
+    
+            text-align: center;
+            transition: 0.3s;
+           
+        }
+        .product-card-new:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .best-seller-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .product-img {
+            width: 150px;
+            
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 14px;
+        }
+        .rating i {
+            color: #ff9800;
+        }
+        .preview-btn {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 7px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 100%;
+        }
+        .preview-btn:hover {
+            background-color: #ad1457;
+        }
+
+
+
+
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+  
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+  
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+  
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+  
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  
+  }
+
+
+</style>
+<body>
+    
+ <!-- Navbar -->
+ 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container">
+    
+      <a style="font-family: Monomakh; color: #b6486c;"
+     class="navbar-brand" href="index.html">MIXBLUSH</a>
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a  class="nav-link" href="products store.html">Makeup</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" href="skin.html">Skin</a>
+          </li>
+      
+          <li class="nav-item">
+            <a  class="nav-link" href="fragrances.html">Fragrance</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" href="health and wellness.html">Health & Wellness</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" href="accessories.html">Accessories</a>
+          </li>
+        </ul>
+        <a href="https://www.instagram.com/navdxp1/?__pwa=1"><button class="btn " id="talkButton">LET'S TALK</button></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-------------------------------->
+  <div class="container my-4 position-relative">
+    <h4 class="fw-bold"> Explore Makeup Categories</h4>
+  
+    <!-- Left Scroll Button -->
+    <button class="scroll-btn scroll-left" onclick="scrollProducts(-200)">&#10094;</button>
+  
+    <!-- Product Scroller -->
+    <div class="product-scroller" id="productScroller">
+        <div class="product-wrapper">
+            <!-- Product 1 -->
+  
+  
+            <div class="product-card  btn">
+                <a href="lipsticks.html"><img src="lipp.avif" alt="product 1"></a>
+                  <p style="font-family: Monomakh;" >LIPSTICKS</p>
+            </div>
+  
+  
+  
+            <!-- Product 2 -->
+            <div class="product-card btn">
+              <a href="foundations.html"><img src="found.avif" alt="product2"></a>
+              
+                <p style="font-family: Monomakh;" >FOUNDATIONS</p>
+            </div>
+  
+  
+  
+            <!-- Product 3 -->
+            <div class="product-card btn">
+              <a href="eye shadows.html"><img src="eye sh.avif" alt="product3"></a>
+              
+                <p style="font-family: Monomakh;"  > EYE SHADOWS</p>
+            </div>
+  
+  
+  
+            <!-- Product 4 -->
+            <div class="product-card btn">
+              <a href="concealers.html"><img src="cons.avif" alt="product4"></a>
+               
+                <p style="font-family: Monomakh;"  >CONCEALERS</p>
+            </div>
+  
+  
+  
+            <!-- Product 5 -->
+            <div class="product-card btn">
+              <a href="eyeliners and kajals.html"><img src="ek.avif" alt="product5"></a>
+               
+                <p style="font-family: Monomakh;"  >EYELINERS & KAJALS</p>
+            </div>
+  
+  
+  
+  <!-- Product 6 -->
+  <div class="product-card btn">
+    <a href="compacts.html"><img src="com.avif" alt="product 6"></a>
+    
+    <p style="font-family: Monomakh;"   >COMPACTS</p>
+  </div>
+  
+  
+  <!-- Product 7 -->
+  <div class="product-card btn">
+    <a href="face primers.html"><img src="fp.avif" alt="product7"></a>
+   
+    <p style="font-family: Monomakh;"  >FACE PRIMERS</p>
+  </div>
+  
+  
+  <!-- Product 8 -->
+  <div class="product-card btn">
+    
+    <a href="blushers.html"><img src="bl.avif" alt="product8"></a>
+  
+   
+   
+    <p style="font-family: Monomakh;"  >BLUSHERS</p>
+  </div>
+  
+  
+  <!-- Product 9 -->
+  <div class="product-card btn">
+    
+    <a href="mascaras.html"><img src="ms.avif" alt="procut9"></a>
+  
+    
+    <p style="font-family: Monomakh;"  >MASCARA</p>
+  </div>
+  
+  
+  <!-- Product 10 -->
+  <div class="product-card btn">
+    
+    <a href="nail polishes.html"><img src="nl.avif" alt="p10"></a>
+  
+    <p style="font-family: Monomakh;"  >NAIL POLISH</p>
+  </div>
+  
+  
+  
+  
+            <!-- More products can be added here -->
+        </div>
+    </div>
+  
+    <!-- Right Scroll Button -->
+    <button class="scroll-btn scroll-right" onclick="scrollProducts(200)">&#10095;</button>
+  </div>
+  
+  <div id="page2">
+<div class="text-center ">
+    <h1 style=" font-family: sigmar;" >BUY EYESHADOWS ONLINE</h1>
+</div>
+   
+<div class="container my-4">
+  <div class="row g-3">
+    <!-- Product Card 1 -->
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/kdzEE9T"><img src="es1.avif" class="product-img" alt="Product" /></a>
+        <h6>MARS Dance Of Joy Eyeshadow Palette - 2
+
+        </h6>
+        <p class="price">₹269/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/pMWstxF"><img src="es2.avif" class="product-img" alt="Product" /></a>
+          <h6>Kay Beauty Multi Texture Eyeshadow Palette - Twilight
+
+          </h6>
+          <p class="price">₹1799/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/xCa0uNY"><img src="es3.avif" class="product-img" alt="Product" /></a>
+          <h6>Huda Beauty Nude Obsessions Mini Eyeshadow Palette - Medium
+
+          </h6>
+          <p class="price">₹2650/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/m4q7r3r"><img src="es4.avif" class="product-img" alt="Product" /></a>
+          <h6>Kay Beauty Eye Kanvas Discover Eyeshadow Palette - Outshine
+
+          </h6>
+          <p class="price">₹699/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/nwZF5PQ"><img src="es5.avif" class="product-img" alt="Product" /></a>
+          <h6>Swiss Beauty Ultimate 9 Pigmented Colors Eyeshadow Palette - Shade 02
+
+          </h6>
+          <p class="price">₹290/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/F4tX3dp"><img src="es6.avif" class="product-img" alt="Product" /></a>
+          <h6>Makeup Revolution Forever Flawless Eyeshadow Palette-18 Smooth & Rich Shade - Affinity
+
+          </h6>
+          <p class="price">₹1070/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/obCD5N2"><img src="es7.avif" class="product-img" alt="Product" /></a>
+          <h6>Makeup Revolution Reloaded Combo - II
+
+          </h6>
+          <p class="price">₹799/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/k6Zy7TL"><img src="es8.avif" class="product-img" alt="Product" /></a>
+          <h6>MARS Eyes Can Kill Eyeshadow Palette
+
+          </h6>
+          <p class="price">₹1349/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/dce2lIU"><img src="es9.avif" class="product-img" alt="Product" /></a>
+          <h6>Kay Beauty Multi Texture Eyeshadow Palette - Twilight
+
+          </h6>
+          <p class="price">₹1799/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/wQfF4WW"><img src="es10.avif" class="product-img" alt="Product" /></a>
+          <h6>Kay Beauty Metallic Eyeshadow Stick Pencil - Fortune
+
+          </h6>
+          <p class="price">₹764/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/g77vjZ5"><img src="es11.avif" class="product-img" alt="Product" /></a>
+          <h6>Swiss Beauty All About Lip Palette - Colors 01
+
+          </h6>
+          <p class="price">₹422/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="product-card-new">
+          <a href="https://bitli.in/czIkZYH"><img src="es12.avif" class="product-img" alt="Product" /></a>
+          <h6>Urban Decay The Original Naked Eyeshadow Palette (Limited Edition)
+          </h6>
+          <p class="price">₹7000/-</p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+  </div>
+  <!-------------------------------->
+    <!--------------------------update-------------------------------------->
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/kVFfelw"><img src="es13.avif" class="product-img" alt="Product" /></a>
+        <h6>e.l.f. Cosmetics Bite Size Eyeshadow - Berry Bad
+
+        </h6>
+        <p class="price">₹390/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/x5SqZ3G"><img src="es14.avif" class="product-img" alt="Product" /></a>
+        <h6>Lakme Ultimate Glam Eyeshadow - Sunkissed
+
+        </h6>
+        <p class="price">₹404/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/JwLo7Cb"><img src="es15.avif" class="product-img" alt="Product" /></a>
+        <h6>Nykaa Eyes On Me! 10-in-1 Eyeshadow Palette - Sundowner Stunner
+
+        </h6>
+        <p class="price">₹454/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/03EtBxq"><img src="es16.avif" class="product-img" alt="Product" /></a>
+        <h6>Nykaa Cosmetics Eyes On Me! 4 in 1 Quad Eyeshadow Palette - Brunch Party
+
+        </h6>
+        <p class="price">₹244/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/Dy4X6eR"><img src="es17.avif" class="product-img" alt="Product" /></a>
+        <h6>MARS Dance Of Joy Eyeshadow Palette - 2
+
+        </h6>
+        <p class="price">₹274/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/l8JN4Ia"><img src="es18.avif" class="product-img" alt="Product" /></a>
+        <h6>Maybelline New York Color Rivals Longwear Duo Eyeshadow Palette - Assertive X Coy
+
+        </h6>
+        <p class="price">₹499/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/kFkVrh6"><img src="es19.avif" class="product-img" alt="Product" /></a>
+        <h6>Swiss Beauty Ultimate 9 Pigmented Colors Eyeshadow Palette - Shade 02
+
+        </h6>
+        <p class="price">₹280/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/Cz5RxN4"><img src="es20.avif" class="product-img" alt="Product" /></a>
+        <h6>Swiss Beauty All About Lip Palette - Colors 01
+
+        </h6>
+        <p class="price">₹422/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/XLY1x7h"><img src="es21.avif" class="product-img" alt="Product" /></a>
+        <h6>MARS Eyebrow Powder Palette - 8g
+
+        </h6>
+        <p class="price">₹219/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/Sc1TgnP"><img src="es22.avif" class="product-img" alt="Product" /></a>
+        <h6>Mars All I Need Makeup Kit With Multicolor Eyeshadows, Blusher, Bronzer And Highlighter - 01
+
+        </h6>
+        <p class="price">₹367/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/VGq2cil"><img src="es23.avif" class="product-img" alt="Product" /></a>
+        <h6>Insight Cosmetics Blush & Highlight Palette
+
+        </h6>
+        <p class="price">₹356/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/Hjvu2J7"><img src="es24.avif" class="product-img" alt="Product" /></a>
+        <h6>Insight Cosmetics All Eyes On You Eyeshadow Palette
+
+        </h6>
+        <p class="price">₹318/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card-new">
+        <a href="https://bitli.in/ojA0n4s"><img src="es25.avif" class="product-img" alt="Product" /></a>
+        <h6>MARS Iceyoureyes Liquid Eyeshadow - Pole Star
+
+        </h6>
+        <p class="price">₹246/-</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+    </div>
+   
+    <!--------------------------update-------------------------------------->
+  
+  
+  <div class="b-example-divider mb-0"></div>
+  
+
+  <div class="b-example-divider"></div>
+
+
+  <div class="container">
+    <footer class="py-5 ">
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-2 mb-3 ">
+          <h5 style="font-family: Monomakh;" >TOP BEAUTY BRANDS </h5>
+          <ul class="nav flex-column ">
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/ysl.html" class="nav-link p-0 text-body-secondary">YSL</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/burberry.html" class="nav-link p-0 text-body-secondary">Burberry</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/redken.html" class="nav-link p-0 text-body-secondary">Redken</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/nars.html" class="nav-link p-0 text-body-secondary">NARS</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/hudabeauty.html" class="nav-link p-0 text-body-secondary">Huda Beauty</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/armani.html" class="nav-link p-0 text-body-secondary">Giorgio Armani</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/lancome.html" class="nav-link p-0 text-body-secondary">Lancome</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="font-family: Monomakh;" >SHOP BY CATEGORY</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/haircare.html" class="nav-link p-0 text-body-secondary">Haircare</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/skincare.html" class="nav-link p-0 text-body-secondary">Skincare</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/fragrance.html" class="nav-link p-0 text-body-secondary">Fragrance</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/bathbody.html" class="nav-link p-0 text-body-secondary">Bath & Body</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="font-family: Monomakh;" >EVERYDAY USES BRANDS</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/dove.html" class="nav-link p-0 text-body-secondary">Dove</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/cetaphil.html" class="nav-link p-0 text-body-secondary">Cetaphil</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/dot%20and%20key.html" class="nav-link p-0 text-body-secondary">Dot & Key</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/plum.html" class="nav-link p-0 text-body-secondary">Plum</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/ponds.html" class="nav-link p-0 text-body-secondary">Ponds</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/tresseme.html" class="nav-link p-0 text-body-secondary">Tresseme</a></li>
+            <li class="nav-item mb-2"><a href="https://navdxp1.github.io/azzoffbeauty.com/kay.html" class="nav-link p-0 text-body-secondary">Kay Beauty</a></li>
+          </ul>
+        </div>
+  
+      
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top ">
+        <p style="font-family: Sigmar;" >&copy; 2025 MIXBLUSH, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+
+
+    function scrollProducts(scrollOffset) {
+        document.getElementById('productScroller').scrollLeft += scrollOffset;
+    }
+  
+    
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
